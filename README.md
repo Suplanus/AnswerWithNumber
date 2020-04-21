@@ -1,14 +1,14 @@
 # AnswerWithNumber
 
-This is example app to show the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
-
-Have fun with it 💕
-
-&nbsp;
-
 <p align="center">
   <img src="media/images/icon.png" />
 </p>
+
+&nbsp;
+
+This is example app to show the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
+
+Have fun with it 💕🦄
 
  &nbsp; 
  
@@ -18,7 +18,22 @@ Have fun with it 💕
 
 &nbsp;
 
-## Run test on AppCenter
+## Diagnostics
+
+### Crash
+You can made a crash if you enter `1337`... then you are a _l33t-h4xXor_ 👩‍💻
+
+### Error
+You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dotnet/api/system.overflowexception) when you enter a too long number... Then you see the crash 💥
+
+## Analytics
+This events are stored:
+- **Difficulty**: If you fail, the level and the answer is logged
+- **Highscore**: If you win, the time is logged
+
+## Test
+
+Run test on AppCenter via commandline 🔴🟢
 
 ### iOS
 
