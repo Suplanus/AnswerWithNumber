@@ -26,10 +26,14 @@ You can made a crash if you enter `1337`... then you are a _l33t-h4xXor_ 👩‍
 ### Error
 You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dotnet/api/system.overflowexception) when you enter a too long number... Then you see the crash 💥
 
+&nbsp;
+
 ## Analytics
 This events are stored:
 - **Difficulty**: If you fail, the level and the answer is logged
 - **Highscore**: If you win, the time is logged
+
+&nbsp;
 
 ## Test
 
