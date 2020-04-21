@@ -6,11 +6,15 @@ Have fun with it 💕
 
 &nbsp;
 
-<div style="text-align:center"><img src="media/images/icon.png" /></div>
+<p align="center">
+  <img src="media/images/icon.png" />
+</p>
 
  &nbsp; 
  
-<div style="text-align:center"><img src="media/images/screenshot.png" /></div>
+<p align="center">
+  <img src="media/images/screenshot.png" />
+</p>
 
 &nbsp;
 
