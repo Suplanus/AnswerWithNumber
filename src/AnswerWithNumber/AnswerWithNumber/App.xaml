@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="AnswerWithNumber.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Application.Resources>
+        <Color x:Key="BackgroundColor">White</Color>
+        <Color x:Key="ForegroundColor">Black</Color>
+        <Color x:Key="HighlightColor">Purple</Color>
+        <Color x:Key="DimmedColor">LightGray</Color>
+
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{StaticResource HighlightColor}" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="BorderColor" Value="{StaticResource DimmedColor}" />
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource HighlightColor}" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+
+    </Application.Resources>
+</Application>

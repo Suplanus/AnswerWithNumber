@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AnswerWithNumber.View.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:AnswerWithNumber.Converter;assembly=AnswerWithNumber"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:viewModel="clr-namespace:AnswerWithNumber.ViewModel;assembly=AnswerWithNumber"
+    ios:Page.UseSafeArea="true"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewModel:MainViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:GameStateToBoolConverter x:Key="GameStateToBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <!--  Question  -->
+        <pancakeView:PancakeView
+            Grid.Row="0"
+            BackgroundColor="{StaticResource HighlightColor}"
+            BorderThickness="4"
+            CornerRadius="40,0,0,40"
+            HasShadow="False"
+            HorizontalOptions="FillAndExpand">
+            <Label
+                Margin="10"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Start"
+                IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Playing}"
+                Text="{Binding Game.CurrentLevel.Question}"
+                TextColor="{StaticResource BackgroundColor}"
+                VerticalOptions="CenterAndExpand" />
+        </pancakeView:PancakeView>
+
+        <!--  Animations  -->
+        <forms:AnimationView
+            Grid.Row="0"
+            Animation="animation_error.json"
+            HorizontalOptions="FillAndExpand"
+            IsPlaying="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Error}"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Error}"
+            Loop="True"
+            VerticalOptions="FillAndExpand" />
+
+        <forms:AnimationView
+            Grid.Row="0"
+            Animation="animation_wrong.json"
+            HorizontalOptions="FillAndExpand"
+            IsPlaying="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Wrong}"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Wrong}"
+            Loop="True"
+            VerticalOptions="FillAndExpand" />
+
+        <forms:AnimationView
+            Grid.Row="0"
+            Animation="animation_finished.json"
+            HorizontalOptions="FillAndExpand"
+            IsPlaying="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Finished}"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Finished}"
+            Loop="True"
+            VerticalOptions="FillAndExpand" />
+
+        <!--  AnswerFromUser  -->
+        <Label
+            Grid.Row="1"
+            AutomationId="AnswerFromUserLabel"
+            FontSize="Large"
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Playing}"
+            Text="{Binding Game.AnswerFromUser}"
+            TextColor="{StaticResource HighlightColor}"
+            VerticalOptions="FillAndExpand"
+            VerticalTextAlignment="Center" />
+
+        <!--  Retry  -->
+        <Button
+            Grid.Row="2"
+            AutomationId="RetryButton"
+            Command="{Binding RetryCommand}"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Retry}"
+            Text="Nochmal spielen"
+            VerticalOptions="CenterAndExpand" />
+
+        <!--  NumPad  -->
+        <Grid
+            Grid.Row="2"
+            IsVisible="{Binding Game.State, Converter={StaticResource GameStateToBoolConverter}, ConverterParameter=Playing}"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!--  1, 2, 3  -->
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                AutomationId="Digit1Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="1"
+                Text="1" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                AutomationId="Digit2Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="2"
+                Text="2" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                AutomationId="Digit3Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="3"
+                Text="3" />
+
+            <!--  4, 5, 6  -->
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                AutomationId="Digit4Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="4"
+                Text="4" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                AutomationId="Digit5Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="5"
+                Text="5" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                AutomationId="Digit6Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="6"
+                Text="6" />
+
+            <!--  7, 8, 9  -->
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                AutomationId="Digit7Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="7"
+                Text="7" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                AutomationId="Digit8Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="8"
+                Text="8" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                AutomationId="Digit9Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="9"
+                Text="9" />
+
+
+            <!--  Delete, 0, Geht Answer)  -->
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                AutomationId="DeleteButton"
+                Command="{Binding DeleteCommand}"
+                Text="Löschen" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                AutomationId="Digit0Button"
+                Command="{Binding AddNumberCommand}"
+                CommandParameter="0"
+                Text="0" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                AutomationId="AnswerButton"
+                BackgroundColor="{StaticResource HighlightColor}"
+                BorderColor="{StaticResource HighlightColor}"
+                Command="{Binding AnswerCommand}"
+                IsEnabled="{Binding Game.CanAnswer}"
+                Text="Antworten"
+                TextColor="{StaticResource BackgroundColor}" />
+        </Grid>
+
+    </Grid>
+</ContentPage>
