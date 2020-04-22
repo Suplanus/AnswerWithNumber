@@ -348,5 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-/src/AnswerWithNumber/AnswerWithNumber/Model/AppSecrets.cs
+/src/AnswerWithNumber/AnswerWithNumber/Model/AppSecretsLocal.cs
 /appcenter
