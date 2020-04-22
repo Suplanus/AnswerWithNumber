@@ -26,7 +26,7 @@ namespace AnswerWithNumber.Model
 
     public void Answer()
     {
-      // EasterEgg
+      // Crash
       if (AnswerFromUser.Equals("1337"))
       {
         throw new StackOverflowException("Oh my god, a hacker!");
@@ -37,22 +37,23 @@ namespace AnswerWithNumber.Model
         int answerNumber = Convert.ToInt32(AnswerFromUser);
         if (CurrentLevel.Answer.Equals(answerNumber))
         {
-          // Correct
+          // Answer: Correct
           if (CurrentLevel.Equals(Levels.Last()))
           {
-            // Finished
+            // Game: Finished
             State = GameState.Finished;
             string seconds = _stopwatch.Elapsed.Seconds.ToString();
             Log.Event("Highscore", "Finished", seconds);
           }
           else
           {
+            // Next level
             CurrentLevelCount++;
           }
         }
         else
         {
-          // Wrong
+          // Answer: Wrong
           State = GameState.Wrong;
           Log.Event("Difficulty", "Level", CurrentLevel.Question);
         }
