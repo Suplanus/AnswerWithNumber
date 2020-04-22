@@ -18,6 +18,19 @@ Have fun with it 💕🦄
 
 &nbsp;
 
+## Build
+
+### Status
+
+| Plattform | Branch | Status |
+|-----------|--------|--------|
+| **Android**   | Dev    | [![Build status](https://build.appcenter.ms/v0.1/apps/72ebc886-01e9-4f5d-9a83-a39dcc9e3913/branches/dev/badge)](https://appcenter.ms)   |
+|           | Master | [![Build status](https://build.appcenter.ms/v0.1/apps/72ebc886-01e9-4f5d-9a83-a39dcc9e3913/branches/master/badge)](https://appcenter.ms)   |
+| **iOS**       | Dev    | [![Build status](https://build.appcenter.ms/v0.1/apps/44b1eeb7-d793-42f2-b4a7-e0a1f6119b81/branches/dev/badge)](https://appcenter.ms)   |
+|           | Master | [![Build status](https://build.appcenter.ms/v0.1/apps/44b1eeb7-d793-42f2-b4a7-e0a1f6119b81/branches/master/badge)](https://appcenter.ms)   |
+
+&nbsp;
+
 ## Diagnostics
 
 ### Crash
@@ -38,6 +51,8 @@ This events are stored:
 ## Test
 
 Run test on AppCenter via commandline 🔴🟢
+
+![](media/images/test_result.png)
 
 ### iOS
 
