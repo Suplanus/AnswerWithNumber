@@ -10,7 +10,12 @@ namespace AnswerWithNumber.Model
   {
     internal static void Init()
     {
-      IAppSecrets appSecrets = new AppSecrets();
+      IAppSecrets appSecrets;
+#if APPCENTER
+      appSecrets = new AppSecretsCloud();
+#else
+      appSecrets = new AppSecretsLocal();
+#endif
       AppCenter.Start($"ios={appSecrets.AppCenterIos};" +
                       $"android={appSecrets.AppCenterAndroid}",
                       typeof(Analytics), typeof(Crashes));
