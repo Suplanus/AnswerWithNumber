@@ -60,7 +60,7 @@ Table of contents
 - [Custom Build scripts](https://montemagno.com/vs-app-center-custom-build-scripts-for-production-apps/)
 
 <p>
-  <img src="media/images/build.png" alt="Build" style="width:300px;"/>
+  <img src="media/images/build.png" alt="Build" style="width:200px;"/>
 </p>
 
 ## 🤖 Android
@@ -86,11 +86,15 @@ Table of contents
 
 Run test on AppCenter via commandline
 
-<img src="media/images/uitest_result1.png" alt="Test result 1" style="width:600px;"/>
+<p>
+  <img src="media/images/uitest_result1.png" alt="Test result 1" style="width:600px;"/>
+</p>
 
 &nbsp;
 
-<img src="media/images/uitest_result2.png" alt="Test result 2" style="width:600px;"/>
+<p>
+  <img src="media/images/uitest_result2.png" alt="Test result 2" style="width:600px;"/>
+</p>
 
 ## 🤖 Android
 
@@ -120,17 +124,22 @@ You can made a crash if you enter `1337`... then you are a _l33t-h4xXor_!
 
 There is a [issue](https://github.com/Suplanus/AnswerWithNumber/issues/3) created by AppCenter. There you can see the details of the crash.
 
-
-<img src="media/images/diagnostics_crashes1.png" alt="Crashes 1" style="width:500px;"/>
+<p>
+  <img src="media/images/diagnostics_crashes1.png" alt="Crashes 1" style="width:500px;"/>
+</p>
 
 ## 🚨 Error
 You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dotnet/api/system.overflowexception) when you enter a too long number like `66666666666666666666666`. Then you see the error.
 
-<img src="media/images/diagnostics_error1.png" alt="Error 1" style="width:300px;"/>
+<p>
+  <img src="media/images/diagnostics_error1.png" alt="Error 1" style="width:300px;"/>
+</p>
 
 &nbsp;
 
-<img src="media/images/diagnostics_error2.png" alt="Error 2" style="width:600px;"/>
+<p>
+  <img src="media/images/diagnostics_error2.png" alt="Error 2" style="width:600px;"/>
+</p>
 
 &nbsp;
 
@@ -141,7 +150,9 @@ You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dot
 
 ## 🗺 Overview
 
-<img src="media/images/analytics_overview.png" alt="Analytics overview" style="width:600px;"/>
+<p>
+  <img src="media/images/analytics_overview.png" alt="Analytics overview" style="width:600px;"/>
+</p>
 
 &nbsp;
 
@@ -150,8 +161,12 @@ This events are stored:
 - **Difficulty**: If you fail, the level is logged
 - **Highscore**: If you win, the time in seconds is logged
 
-<img src="media/images/analytics_event1.png" alt="Analytics event 1" style="width:600px;"/>
+<p>
+  <img src="media/images/analytics_event1.png" alt="Analytics event 1" style="width:600px;"/>
+</p>
 
 &nbsp;
 
-<img src="media/images/analytics_event2.png" alt="Analytics event 2" style="width:600px;"/>
+<p>
+  <img src="media/images/analytics_event2.png" alt="Analytics event 2" style="width:600px;"/>
+</p>
