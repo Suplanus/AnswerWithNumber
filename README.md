@@ -12,13 +12,15 @@ This is example app to show the [Microsoft AppCenter](https://appcenter.ms) func
 
 Have fun with it 💕🦄
 
- &nbsp; 
- 
 <p align="center">
   <img src="media/images/screenshot.png" />
 </p>
 
+📺 [Watch demonstration video (spoiler alarm for the answers!)](https://www.youtube.com/watch?v=3tDbkfS11rg&feature=youtu.be)
+---
+
 &nbsp;
+ 
 
 Table of contents
 ---
