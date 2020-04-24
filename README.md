@@ -59,7 +59,9 @@ Table of contents
 - [AppCenter: Build](https://docs.microsoft.com/en-us/appcenter/build/) 
 - [Custom Build scripts](https://montemagno.com/vs-app-center-custom-build-scripts-for-production-apps/)
 
-<img src="media/images/build.png" alt="Build" style="width:300px;"/>
+<p>
+  <img src="media/images/build.png" alt="Build" style="width:300px;"/>
+</p>
 
 ## 🤖 Android
 
