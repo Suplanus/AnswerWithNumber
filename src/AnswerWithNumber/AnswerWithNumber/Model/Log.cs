@@ -16,8 +16,8 @@ namespace AnswerWithNumber.Model
 #else
       appSecrets = new AppSecretsLocal();
 #endif
-      AppCenter.Start($"ios={appSecrets.AppCenterIos};" +
-                      $"android={appSecrets.AppCenterAndroid}",
+      AppCenter.Start($"android={appSecrets.AppCenterAndroid};" +
+                      $"ios={appSecrets.AppCenterIos}",
                       typeof(Analytics), typeof(Crashes));
     }
 
