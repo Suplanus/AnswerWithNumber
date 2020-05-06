@@ -16,15 +16,25 @@ namespace AnswerWithNumber.View
     {
       base.OnAppearing();
 
-      Color color1 = PancakeView.BackgroundGradientStops.First().Color;
-      Color color2 = PancakeView.BackgroundGradientStops.Last().Color;
+      // Stops not working in current PanCake version
+
+      //Color color1 = PancakeView.BackgroundGradientStops.First().Color;
+      //Color color2 = PancakeView.BackgroundGradientStops.Last().Color;
+      Color color1 = PancakeView.BackgroundGradientStartColor;
+      Color color2 = PancakeView.BackgroundGradientEndColor;
+      uint animationDuration = 1000;
 
       while (true)
       {
-        await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientStops.First().Color = c, 5000, Easing.Linear);
-        await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientStops.Last().Color = c, 5000, Easing.Linear);  
-        await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientStops.First().Color = c, 5000, Easing.Linear);
-        await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientStops.Last().Color = c, 5000, Easing.Linear);  
+        //await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientStops.First().Color = c, 5000, Easing.Linear);
+        //await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientStops.Last().Color = c, 5000, Easing.Linear);  
+        //await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientStops.First().Color = c, 5000, Easing.Linear);
+        //await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientStops.Last().Color = c, 5000, Easing.Linear);  
+
+        await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientStartColor = c, animationDuration, Easing.Linear);
+        await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientEndColor = c, animationDuration, Easing.Linear);  
+        await PancakeView.ColorTo(color2, color1, c => PancakeView.BackgroundGradientStartColor = c, animationDuration, Easing.Linear);
+        await PancakeView.ColorTo(color1, color2, c => PancakeView.BackgroundGradientEndColor = c, animationDuration, Easing.Linear);  
       }
     }
   }

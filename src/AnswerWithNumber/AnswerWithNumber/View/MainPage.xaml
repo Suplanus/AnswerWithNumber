@@ -32,14 +32,16 @@
         <pancakeView:PancakeView
             x:Name="PancakeView"
             Grid.Row="0"
-            BackgroundGradientAngle="45"
+            BackgroundGradientAngle="180"
+            BackgroundGradientEndColor="{StaticResource HighlightColorLight}"
+            BackgroundGradientStartColor="{StaticResource HighlightColor}"
             BorderThickness="4"
             CornerRadius="40,0,0,40"
             HorizontalOptions="FillAndExpand">
-            <pancakeView:PancakeView.BackgroundGradientStops>
+            <!--<pancakeView:PancakeView.BackgroundGradientStops>
                 <pancakeView:GradientStop Offset="0" Color="Red" />
                 <pancakeView:GradientStop Offset="1" Color="Green" />
-            </pancakeView:PancakeView.BackgroundGradientStops>
+            </pancakeView:PancakeView.BackgroundGradientStops>-->
             <Label
                 Margin="10"
                 HorizontalOptions="Center"
