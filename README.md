@@ -8,7 +8,7 @@ AnswerWithNumber
 
 &nbsp;
 
-This is example app to showcase the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
+This is an example app to showcase the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
 
 Have fun with it 💕🦄
 
