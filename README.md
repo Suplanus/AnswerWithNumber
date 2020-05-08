@@ -8,7 +8,7 @@ AnswerWithNumber
 
 &nbsp;
 
-This is example app to show the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
+This is example app to showcase the [Microsoft AppCenter](https://appcenter.ms) functions in a real world application 🌍
 
 Have fun with it 💕🦄
 
@@ -120,16 +120,16 @@ appcenter test run uitest --app "Suplanus/AnswerWithNumber-iOS" --devices "Supla
 - [AppCenter: Diagnostics](https://docs.microsoft.com/en-us/appcenter/diagnostics/)
 
 ## 💥 Crash
-You can made a crash if you enter `1337`... then you are a _l33t-h4xXor_!
+You can trigger a crash by entering `1337`... then you are a _l33t-h4xXor_!
 
-There is a [issue](https://github.com/Suplanus/AnswerWithNumber/issues/3) created by AppCenter. There you can see the details of the crash.
+[This is an issue](https://github.com/Suplanus/AnswerWithNumber/issues/3) created by AppCenter. There you can see the details of the crash.
 
 <p>
   <img src="media/images/diagnostics_crashes1.png" alt="Crashes 1" style="width:500px;"/>
 </p>
 
 ## 🚨 Error
-You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dotnet/api/system.overflowexception) when you enter a too long number like `66666666666666666666666`. Then you see the error.
+You can trigger a [`System.OverflowException`](https://docs.microsoft.com/de-de/dotnet/api/system.overflowexception) by entering a large number like `66666666666666666666666`. Then you see the error.
 
 <p>
   <img src="media/images/diagnostics_error1.png" alt="Error 1" style="width:300px;"/>
@@ -157,7 +157,7 @@ You can made a [`System.OverflowException`](https://docs.microsoft.com/de-de/dot
 &nbsp;
 
 ## 🎆 Events
-This events are stored:
+These events are stored:
 - **Difficulty**: If you fail, the level is logged
 - **Highscore**: If you win, the time in seconds is logged
 
