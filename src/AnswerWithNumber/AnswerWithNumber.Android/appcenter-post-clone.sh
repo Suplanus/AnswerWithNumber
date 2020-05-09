@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "---"
-echo "Start post build script..."
+echo "Start build script..."
 echo "Arguments for updating:"
 echo " - AppCenterAndroidSecret: $APPCENTER_ANDROID_SECRET"
 echo " - AppCenterIosSecret: $APPCENTER_IOS_SECRET"
@@ -16,4 +16,4 @@ sed -i '' "s/AppCenterIosSecret/$APPCENTER_IOS_SECRET/g" $IdFile
 echo "---"
 cat $IdFile
 echo "---"
-echo "End post build script..."
+echo "End build script"
