@@ -10,6 +10,7 @@
         <Color x:Key="BackgroundColor">White</Color>
         <Color x:Key="ForegroundColor">Black</Color>
         <Color x:Key="HighlightColor">Purple</Color>
+        <Color x:Key="HighlightColorLight">DarkOrchid</Color>
         <Color x:Key="DimmedColor">LightGray</Color>
 
         <Style TargetType="Button">
