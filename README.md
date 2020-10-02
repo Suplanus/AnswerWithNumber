@@ -12,6 +12,14 @@ This is example app to show the [Microsoft AppCenter](https://appcenter.ms) func
 
 Have fun with it 💕🦄
 
+&nbsp;
+
+In the Windows.Developer magazine I wrote an article series and used this as example:
+- [Part 1: Set-up, Diagnostics and Analytics](https://kiosk.entwickler.de/windows-developer-magazin/windows-developer-magazin-9-2020/set-up-diagnostics-und-analytics/)
+- [Part 2: Build, Distribute und Test](https://kiosk.entwickler.de/windows-developer-magazin/windows-developer-magazin-11-2020/build-distribute-und-test/)
+
+&nbsp;
+
 <p align="center">
   <img src="media/images/screenshot.png" />
 </p>
